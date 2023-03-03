@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			background-color: pink;
+		}
+		center{
+			margin: auto;
+			background-color: white;
+			width:40%;
+			padding: 2%;
+		}
+		center input{
+			padding: 2%;
+			font-size: 1rem;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<p><input id="enter username" type="email" placeholder="enter username"></p>
+		<p><input id="password" type="password" placeholder="password"></p>
+		<button onclick="display()">Show</button>
+	</center>
+	<script type="text/javascript">
+		function display(){
+		var passwordData=document.createElement("password");
+		console.log(passwordData.type)
+		if(passwordData.type=="password"){
+			var s=passwordData.setAttribute("type","text")
+		passwordData.append(s)
+		document.getElementById("btn").innerHTML="HIDE"
+		}
+		else{
+			var s=passwordData.setAttribute("type","password")
+		passwordData.append(s)
+		document.getElementById("btn").innerHTML="Show"
+		}
+	}
+	</script>
+</body>
+</html>
